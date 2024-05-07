@@ -1,28 +1,11 @@
-document.body.style.margin   = 0
-document.body.style.overflow = `hidden`
+document.body.style.margin = 0;
+document.body.style.overflow = 'hidden';
 
-const cnv = document.getElementById (`cnv_element`)
-cnv.width = innerWidth
-cnv.height = innerHeight
+const cnv = document.getElementById('cnv_element');
+cnv.width = window.innerWidth;
+cnv.height = window.innerHeight;
 
-const ctx = cnv.getContext (`2d`)
-
-const draw_frame = () => {
-   ctx.fillStyle = `turquoise`
-   ctx.fillRect (0, 0, innerWidth, innerHeight)
-
-   requestAnimationFrame (draw_frame)
-}
-
-draw_frame ()
-
-window.onresize = () => {
-   cnv.width = innerWidth
-   cnv.height = innerHeight   
-}
-
-//Created by Ren Yuan
-
+const ctx = cnv.getContext('2d');
 
 const renderer = new c2.Renderer(document.getElementById('c2'));
 resize();
@@ -30,8 +13,7 @@ resize();
 renderer.background('#cccccc');
 let random = new c2.Random();
 
-
-class Agent extends c2.Cell{
+class Agent extends c2.Cell {
     constructor() {
         let x = random.next(renderer.width);
         let y = random.next(renderer.height);
@@ -43,7 +25,7 @@ class Agent extends c2.Cell{
         this.color = c2.Color.hsl(random.next(0, 30), random.next(30, 60), random.next(20, 100));
     }
 
-    update(){
+    update() {
         this.p.x += this.vx;
         this.p.y += this.vy;
 
@@ -63,7 +45,7 @@ class Agent extends c2.Cell{
         }
     }
 
-    display(){
+    display() {
         if (this.state != 2) {
             renderer.stroke(c2.Color.rgb(0, .2));
             renderer.lineWidth(1);
@@ -82,7 +64,6 @@ for (let i = 0; i < agents.length; i++) {
     agents[i] = new Agent();
 }
 
-
 renderer.draw(() => {
     let voronoi = new c2.LimitedVoronoi();
     voronoi.compute(agents);
@@ -93,9 +74,8 @@ renderer.draw(() => {
     }
 });
 
-
 window.addEventListener('resize', resize);
+
 function resize() {
-    let parent = renderer.canvas.parentElement;
-    renderer.size(parent.clientWidth, parent.clientWidth / 16 * 9);
+    renderer.size(window.innerWidth, window.innerHeight);
 }
