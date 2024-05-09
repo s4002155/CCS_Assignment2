@@ -53,11 +53,6 @@
                 renderer.lineWidth(2);
                 renderer.fill(this.color);
                 renderer.rect(this.p.x, this.p.y, this.randomWidth, this.randomHeight); // 랜덤한 너비와 높이로 직사각형 그리기
-
-                renderer.stroke(c2.Color.rgb(255, 0, 255));
-                renderer.lineWidth(1);
-                renderer.text("CLICK!", this.p.x, this.p.y, Math.PI / 4); // 포인트 대신에 글씨 표시
-
             }
         }
     }
