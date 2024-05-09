@@ -13,6 +13,10 @@
     const maxWidth = 400; // 최대 너비
     const maxHeight = 200; // 최대 높이    
 
+        // 직사각형의 중심 좌표 계산
+    const rectCenterX = this.p.x + this.randomWidth / 2;
+    const rectCenterY = this.p.y + this.randomHeight / 2;
+
     class Agent extends c2.Cell {
         constructor(x, y) {
             let r = random.next(renderer.width / 40, renderer.width / 15);
@@ -55,8 +59,8 @@
                 renderer.rect(this.p.x, this.p.y, this.randomWidth, this.randomHeight); // 랜덤한 너비와 높이로 직사각형 그리기
 
                 renderer.stroke(c2.Color.rgb(255, 0, 255));
-                renderer.lineWidth(5);
-                renderer.text("CLICK!", this.p.x, this.p.y, Math.PI / 4); // 포인트 대신에 글씨 표시
+                renderer.lineWidth(1);
+                renderer.text("CLICK!", rectCenterX, rectCenterY, Math.PI / 4); // 직사각형 중심에 글씨 표시
 
             }
         }
