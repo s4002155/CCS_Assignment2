@@ -49,7 +49,7 @@
     
         display() {
             if (this.state != 2) {
-                renderer.stroke(c2.Color.rgb(255, .2));
+                renderer.stroke(c2.Color.rgb(255, .1));
                 renderer.lineWidth(5);
                 renderer.fill(this.color);
                 renderer.rect(this.p.x, this.p.y, this.randomWidth, this.randomHeight); // 랜덤한 너비와 높이로 직사각형 그리기
@@ -220,7 +220,7 @@
             s.p.add(s.v);
 
             // draw the ASCII art at the position
-            ctx2.fillStyle = 'grey';
+            ctx2.fillStyle = 'lightgrey';
             ctx2.font = '6px monospace'; // Adjust font size here
             // draw each line of ASCII art
             const lines = ascii_art.split('\n');
