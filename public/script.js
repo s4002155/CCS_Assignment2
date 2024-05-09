@@ -53,18 +53,21 @@
     
         display() {
             if (this.state != 2) {
+                const rectCenterX = this.p.x + this.randomWidth / 2; // 직사각형 중심 X 좌표 계산
+                const rectCenterY = this.p.y + this.randomHeight / 2; // 직사각형 중심 Y 좌표 계산
+    
                 renderer.stroke(c2.Color.rgb(50, .2));
                 renderer.lineWidth(2);
                 renderer.fill(this.color);
                 renderer.rect(this.p.x, this.p.y, this.randomWidth, this.randomHeight); // 랜덤한 너비와 높이로 직사각형 그리기
-
+    
                 renderer.stroke(c2.Color.rgb(255, 0, 255));
                 renderer.lineWidth(1);
                 renderer.text("CLICK!", rectCenterX, rectCenterY, Math.PI / 4); // 직사각형 중심에 글씨 표시
-
             }
         }
     }
+    
     
 
    
