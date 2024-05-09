@@ -1,10 +1,34 @@
 <!doctype html>
 <head>
     <title> b l a n k </title>
+    <style>
+        /* Remove default margin */
+        body {
+            margin: 0;
+            overflow: hidden; /* Optionally remove scrollbars */
+        }
+        
+        canvas {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+    }
+
+    #secondCanvas {
+        z-index: 2;
+    }
+    </style>
+    <script src="vector.js"></script>
 </head>
 
 <body>
-   <canvas id="c2"></canvas>
+   <canvas id="firstCanvas"></canvas>
+   <canvas id="secondCanvas"></canvas>
    <script src="c2.min.js"></script>
    <script src="script.js"></script>
+   <!-- <script src="colour.js"></script>
+   <script src="404.js"></script> -->
 </body>
