@@ -13,10 +13,6 @@
     const maxWidth = 400; // 최대 너비
     const maxHeight = 200; // 최대 높이    
 
-        // 직사각형의 중심 좌표 계산
-    const rectCenterX = this.p.x + this.randomWidth / 2;
-    const rectCenterY = this.p.y + this.randomHeight / 2;
-
     class Agent extends c2.Cell {
         constructor(x, y) {
             let r = random.next(renderer.width / 40, renderer.width / 15);
