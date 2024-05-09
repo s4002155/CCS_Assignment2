@@ -50,7 +50,7 @@
         display() {
             if (this.state != 2) {
                 renderer.stroke(c2.Color.rgb(0, .2));
-                renderer.lineWidth(3);
+                renderer.lineWidth(8);
                 renderer.fill(this.color);
                 renderer.rect(this.p.x, this.p.y, this.randomWidth, this.randomHeight); // 랜덤한 너비와 높이로 직사각형 그리기
             }
