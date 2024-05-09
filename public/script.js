@@ -10,8 +10,8 @@
     renderer.background('#000000');
     let random = new c2.Random();
 
-    const maxWidth = 300; // 최대 너비
-    const maxHeight = 100; // 최대 높이    
+    const maxWidth = 400; // 최대 너비
+    const maxHeight = 200; // 최대 높이    
 
     class Agent extends c2.Cell {
         constructor(x, y) {
