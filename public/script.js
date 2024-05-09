@@ -220,7 +220,7 @@
             s.p.add(s.v);
 
             // draw the ASCII art at the position
-            ctx2.fillStyle = 'darkgrey';
+            ctx2.fillStyle = 'navy';
             ctx2.font = '6px monospace'; // Adjust font size here
             // draw each line of ASCII art
             const lines = ascii_art.split('\n');
