@@ -56,7 +56,7 @@
 
                 renderer.stroke(c2.Color.rgb(255, 0, 255));
                 renderer.lineWidth(1);
-                renderer.text("CLICK!", this.randomWidth/2, this.randomHeight/2, Math.PI / 4); // 포인트 대신에 글씨 표시
+                renderer.text("CLICK!", this.p.x * 2, this.p.y * 2, Math.PI / 4); // 포인트 대신에 글씨 표시
 
             }
         }
