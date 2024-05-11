@@ -109,13 +109,8 @@ function onMouseMove(event) {
     }
 }
 
+
 // Second canvas code
-// get rid of default margin
-// document.body.style.margin = 0;
-
-// get rid of scrollbars
-// document.body.style.overflow = 'hidden';
-
 // TAU is nicer than PI for trig
 const TAU = Math.PI * 2;
 
